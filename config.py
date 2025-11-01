@@ -1,1 +1,2 @@
-BASE_URL = "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login"
+BASE_URL = "https://www.saucedemo.com/"
+INVENTORY = "inventory.html"

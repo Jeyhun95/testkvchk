@@ -1,8 +1,8 @@
-from page.base import BasePage
 from page.login import LoginPage
-from utils.page_client import PageClient
+from page.left_sidebar import LeftSidebar
 
 
 class Application:
-    def __init__(self):
-        self.login = LoginPage(BasePage)
+    def __init__(self, page):
+        self.login = LoginPage(page)
+        self.sidebar = LeftSidebar(page)

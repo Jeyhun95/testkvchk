@@ -11,7 +11,15 @@ def browser() -> Browser:
     browser.close()
     playwright.stop()
 
+
 @pytest.fixture()
-def app():
-    app = Application()
-    return app
+def app(browser):
+    page = browser.new_page()
+    app = Application(page)
+    yield app
+
+
+@pytest.fixture()
+def logout(app):
+    yield
+    app.sidebar.logout()
