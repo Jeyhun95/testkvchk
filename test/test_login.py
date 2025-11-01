@@ -26,6 +26,3 @@ class TestLogin:
         app.login.pass_the_login(username="locked_out_user")
         app.login.assert_url_is(BASE_URL)
         app.login.assert_error_text_is(locked_user, app.login.error_text())
-
-    def test(self, app):
-        app.login.all_items().click()
